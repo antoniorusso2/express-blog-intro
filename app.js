@@ -48,6 +48,13 @@ app.listen(3000, () => {
 
 //array rotta lista almeno 5 post
 app.get("/bacheca", (req, res) => {
-  res.json(posts);
+  const postCounter = posts.length;
+
+  const myResponse = {
+    postCount: postCounter,
+    posts: posts
+  };
+
+  res.json(myResponse);
 });
 //array rotta bacheca ==> oggetto json con lista dei post e il conteggio partendo da un array
