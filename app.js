@@ -41,7 +41,7 @@ const posts = [
 app.use(express.static('public')); //resa pubblica degli asset statici
 
 app.get('/', (req, res) => {
-  console.log(req);
+  // console.log(req);
   res.send('Server del mio blog');
 }); // url for test 'http://localhost:3000'
 app.listen(3000, () => {
@@ -59,4 +59,5 @@ app.get('/bacheca', (req, res) => {
 
   res.json(myResponse);
 });
+
 //array rotta bacheca ==> oggetto json con lista dei post e il conteggio partendo da un array
